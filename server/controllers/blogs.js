@@ -63,7 +63,7 @@ const createBlog = ((req, res) => {
     //         })
     //     }
     // }
-
+console.log(req.body)
     req.body._id = mongoose.Types.ObjectId()
     Blog.create(req.body)
         .then(result => res.status(200).json({ result: result, msg: "Yükleme Başarılı" }))
